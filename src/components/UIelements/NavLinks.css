@@ -1,0 +1,91 @@
+.navs{
+    box-sizing: border-box;
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-btn{
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #ffffff;
+    opacity: .9;
+    font-weight: 600;
+    width: 90%;
+    padding: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+
+    border: none;
+}
+
+.nav-btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background-color: #F7FF58;
+    transition: all .5s;
+}
+
+.nav-btn span::before{
+    content: "";
+    position: absolute;
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #F7FF58;
+    transition: all .5s;
+}
+
+.nav-btn:hover span::before {
+    top: 0;
+}
+
+.nav-btn span::after{
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #F7FF58;
+    transition: all .5s;
+}
+
+.nav-btn:hover span::after {
+    bottom: 0;
+}
+
+.nav-btn::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background-color: #F7FF58;
+    transition: all .5s;
+}
+
+.nav-btn:hover::before {
+    left: 0;
+}
+
+.nav-btn:hover::after {
+    right: 0;
+}

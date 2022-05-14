@@ -1,0 +1,44 @@
+.portfolio-card {
+  box-sizing: border-box;
+  padding: 1.5rem;
+  width: 90%;
+  min-width: 20rem;
+  max-height: 25rem;
+  min-height: 20rem;
+  background: linear-gradient(85deg, #434343, #262626);
+  border-radius: 5px;
+  z-index: 999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .6s;
+
+}
+
+.card-btn{
+    cursor: pointer;
+}
+
+.portfolio-card:hover{
+    box-shadow: rgba(242, 84, 91, 0.25) 0px 54px 55px, rgba(242, 84, 91, 0.12) 0px -12px 30px, rgba(242, 84, 91, 0.12) 0px 4px 6px, rgba(242, 84, 91, 0.17) 0px 12px 13px, rgba(242, 84, 91, 0.09) 0px -3px 5px;
+}
+
+.card-title{
+    text-align: center;
+    color: white;
+}
+
+.card-text{
+    text-align: center;
+    color: white;
+}
+
+.card-link{
+    text-align: center;
+    color: white;
+}
+.card-btn{
+    color: white;
+}

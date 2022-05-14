@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+
+import NavBar from "./components/UIelements/NavBar";
+import Main from "./components/pages/main";
+import Skills from "./components/pages/skills";
+import Contact from "./components/pages/contact";
 
 function App() {
+  const [content, setContent] = useState("main")
+
+  const toggleContent = (pageName) => {
+    setContent(pageName)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar handleClick={toggleContent} />
+      {content === "main" && <Main />}
+      {content === "skills" && <Skills />}
+      {content === "contact" && <Contact />}
+
     </div>
   );
 }
