@@ -22,12 +22,21 @@
     opacity: .9;
     font-weight: 600;
     width: 90%;
-    padding: 1rem;
     letter-spacing: 1px;
     cursor: pointer;
     overflow: hidden;
-
     border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    width: 100%;
+    padding: 1rem;
 }
 
 .nav-btn::before{
