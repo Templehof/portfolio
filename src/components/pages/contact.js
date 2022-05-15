@@ -1,5 +1,6 @@
 import React from "react";
 import "./contact.css";
+import Map from "../UIelements/map";
 
 const Contact = () => {
   return (
@@ -21,11 +22,8 @@ const Contact = () => {
           </button>
         </form>
       </div>
-      <div className="contact-info">
-        <p>Email:</p>
-        <p>Phone:</p>
-        <p>LinkedIn</p>
-      </div>
+      <p className="email">ivan.riumkin@protonmail.com</p>
+      <Map center={{lat: 63.825848, lng:20.263035}} zoom={4}/>
     </section>
   );
 };

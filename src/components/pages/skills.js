@@ -13,22 +13,20 @@ import reactLogo from "../images/techlogos/react.svg";
 import webpackLogo from "../images/techlogos/webpack.svg";
 
 const Skills = () => {
-
   return (
     <section className="page-section skills-section">
-        <div className="skills-text-container">
-          <h3 className="skills-title">
-            Here are some technologies I work with
-          </h3>
-          <p className="skills-text">
-            Apar from <span>HTML5</span> and <span>CSS</span>. I am proficient
-            in writing modern <span>JavaScript</span> including ES6+, OOP, and
-            FP. I have primarily worked with <span>React</span> as my framework
-            of choice and <span>NodeJS</span>, <span>MongoDB</span> with{" "}
-            <span>Mongoose</span> for back-end. I am also currently learning
-            Typescript, NextJS and SASS.
-          </p>
-        </div>
+      <div className="skills-text-container">
+        <h3 className="skills-title">Here are some technologies I work with</h3>
+        <p className="skills-text">
+          Apar from <span>HTML5</span> and <span>CSS</span>. I am proficient in
+          writing modern <span>JavaScript</span> including ES6+, OOP, and FP
+          with testing in <span>Jest</span> and bundling in <span>Webpack</span>
+          . I have primarily worked with <span>React</span> as my framework of
+          choice and <span>NodeJS</span>, <span>MongoDB</span> with{" "}
+          <span>Mongoose</span> for back-end. I am also currently learning
+          Typescript, NextJS and SASS.
+        </p>
+      </div>
       <div className="skills-content-container">
         <div className="ribbon-container">
           <ul className="ribbon">

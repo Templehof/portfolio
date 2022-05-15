@@ -7,24 +7,24 @@ import PortfolioCard from "./portfolio-card";
 
 const portfolioData = [
   {
-    title: "diaspora",
+    title: "Coming Soon!",
     description:
-      "Website created for a non-profit organization that helps refugees. Made in React",
+      "Here will be project description",
   },
   {
-    title: "B/dev",
+    title: "Coming Soon!",
     description:
-      "A website that features a catalog of business development tools. Front-end made in React. Back-end made with NodeJS and MongoDB",
-  },
-  { title: "CSS scene", description: "A cool 3d scene created in pure CSS" },
-  {
-    title: "City-travel",
-    description: "A test website created in vanilla JS, HTML and CSS",
+      "Here will be project description",
   },
   {
-    title: "Creative valuSqrd",
+    title: "Coming Soon!",
     description:
-      "A full-stack web-app for culture and creative industries incubators. Front-end made in React. Back-end is made with NodeJs, and MongoDB",
+      "Here will be project description",
+  },
+  {
+    title: "Coming Soon!",
+    description:
+      "Here will be project description",
   },
 ];
 
