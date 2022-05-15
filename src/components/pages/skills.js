@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./skills.css";
+import { CSSTransition } from "react-transition-group";
 
 import Floaters from "../UIelements/floaters";
 import htmlLogo from "../images/techlogos/html.svg";
@@ -13,8 +14,19 @@ import reactLogo from "../images/techlogos/react.svg";
 import webpackLogo from "../images/techlogos/webpack.svg";
 
 const Skills = () => {
+  const [isShown, setIsShown] = useState(false);
+
+  useEffect(() => {
+    setIsShown(true);
+  }, []);
+
   return (
     <section className="page-section skills-section">
+      <CSSTransition
+        in={isShown}
+        timeout={1000}
+        classNames="skills-page-content"
+      >
       <div className="skills-text-container">
         <h3 className="skills-title">Here are some technologies I work with</h3>
         <p className="skills-text">
@@ -27,6 +39,7 @@ const Skills = () => {
           Typescript, NextJS and SASS.
         </p>
       </div>
+      </CSSTransition>
       <div className="skills-content-container">
         <div className="ribbon-container">
           <ul className="ribbon">

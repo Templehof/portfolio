@@ -8,29 +8,28 @@ import PortfolioCard from "./portfolio-card";
 const portfolioData = [
   {
     title: "Coming Soon!",
-    description:
-      "Here will be project description",
+    description: "Here will be project description",
   },
   {
     title: "Coming Soon!",
-    description:
-      "Here will be project description",
+    description: "Here will be project description",
   },
   {
     title: "Coming Soon!",
-    description:
-      "Here will be project description",
+    description: "Here will be project description",
   },
   {
-    title: "Coming Soon!",
+    title: "🛫 City Break 🌁",
     description:
-      "Here will be project description",
+      "One of the first websites I created. This one was purely for practice. It uses only vanilla technologies with no addons. It look decent though, check it out!",
+    techs: "Java Script, HTML5, CSS",
+    link: "https://templehof.github.io/city-travel/",
   },
 ];
 
 const Main = () => {
   const [data, setData] = useState([]);
-  const [isShown, setIsShown] = useState(false)
+  const [isShown, setIsShown] = useState(false);
 
   const getCards = () => {
     const cards = data.map((card) => {
@@ -38,6 +37,8 @@ const Main = () => {
         <PortfolioCard
           title={card.title}
           description={card.description}
+          tech={card.techs}
+          link={card.link}
           key={portfolioData.indexOf(card)}
         />
       );
@@ -45,21 +46,26 @@ const Main = () => {
     return cards;
   };
 
-  useEffect(()=>{
-    setData(portfolioData)
-    setIsShown(true)
-  }, [])
+  useEffect(() => {
+    setData(portfolioData);
+    setIsShown(true);
+  }, []);
 
   return (
     <section className="page-section main">
-      <CSSTransition in={isShown} timeout={1000} classNames="main-page-content">
       <div className="main-content-container">
         <div className="main-title-group">
-          <h3 className="main-title">
-            Hi! I'm <span>Ivan</span>,
-          </h3>
+          <CSSTransition
+            in={isShown}
+            timeout={1000}
+            classNames="main-page-content"
+          >
+            <h3 className="main-title">
+              Hi! I'm <span>Ivan</span>,
+            </h3>
+          </CSSTransition>
           <h3 className="main-title dev-title">
-            A former business researcher gone a {" "}
+            A former business researcher gone a{" "}
             <ul className="stack">
               <li>f</li>
               <li>u</li>
@@ -71,8 +77,8 @@ const Main = () => {
               <li>a</li>
               <li>c</li>
               <li>k</li>
-            </ul>
-           {" "} developer!
+            </ul>{" "}
+            developer!
           </h3>
         </div>
         <p className="main-content">
@@ -89,7 +95,6 @@ const Main = () => {
           Below you can see some of my portfolio projects!
         </p>
       </div>
-      </CSSTransition>
       <div className="card-container">{getCards()}</div>
       <Floaters />
     </section>

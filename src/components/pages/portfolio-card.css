@@ -35,10 +35,20 @@
     color: white;
 }
 
+.card-text span {
+    color: #F7FF58;
+}
+
 .card-link{
     text-align: center;
     color: white;
+    transition: all ease-out .5s;
 }
+
+.card-link:hover{
+    color: #F7FF58;
+}
+
 .card-btn{
     color: white;
 }
