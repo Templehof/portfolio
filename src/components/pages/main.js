@@ -59,6 +59,7 @@ const Main = () => {
             in={isShown}
             timeout={1000}
             classNames="main-page-content"
+            unmountOnExit
           >
             <h3 className="main-title">
               Hi! I'm <span>Ivan</span>,

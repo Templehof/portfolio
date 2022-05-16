@@ -26,6 +26,7 @@ const Skills = () => {
         in={isShown}
         timeout={1000}
         classNames="skills-page-content"
+        unmountOnExit
       >
       <div className="skills-text-container">
         <h3 className="skills-title">Here are some technologies I work with</h3>

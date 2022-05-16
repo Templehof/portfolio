@@ -1,0 +1,19 @@
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #181818;
+    z-index: 9999;
+}
+
+.mobile-links{
+    width: 20rem;
+}

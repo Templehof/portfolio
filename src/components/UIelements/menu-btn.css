@@ -1,0 +1,42 @@
+.menu-btn {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: 3px solid #d3d3d3;
+    border-radius: 0.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    cursor: pointer;
+    z-index: 10000;
+  }
+  
+  .menu-btn span {
+    display: block;
+    margin: 0.2rem;
+    width: 2rem;
+    height: 4px;
+    background: #d3d3d3;
+    transition: all .3s ease-out;
+  }
+
+  .menu-btn:hover{
+    box-shadow: rgba(242, 84, 91, 0.25) 0px 54px 55px, rgba(242, 84, 91, 0.12) 0px -12px 30px, rgba(242, 84, 91, 0.12) 0px 4px 6px, rgba(242, 84, 91, 0.17) 0px 12px 13px, rgba(242, 84, 91, 0.09) 0px -3px 5px;
+  }
+  
+  .menu-btn:hover span,
+  .menu-btn.hover span {
+    background: rgb(242, 84, 91);
+  }
+
+  @media screen and (max-width: 1100px) {
+      .menu-btn{
+          display: flex;
+      }
+      
+  }

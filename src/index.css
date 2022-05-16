@@ -14,8 +14,9 @@ code {
 }
 
 .page-section {
+  overflow-x: hidden;
   box-sizing: border-box;
   background-color: #272727;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
 }

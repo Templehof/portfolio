@@ -93,3 +93,54 @@
     opacity: .9;
     font-family: 'IBM Plex Sans', sans-serif;
 }
+
+@media screen and (max-width:1100px) {
+    .contact-container{
+        margin-top: 5rem;
+        width: 90%;
+    }
+
+    .contact-title{
+        font-size: 1.4rem;
+    }
+
+    .contact-form input, textarea {
+        font-size: 1.2rem;
+    }
+
+    .email{
+        font-size: 1.2rem;
+    }
+}
+
+.contact-title-enter {
+    opacity: 0;
+  }
+  .contact-title-enter-active {
+    animation: slide-in-blurred-left 1s;
+    opacity: 1;
+    transition: all 1s;
+  }
+
+
+  @keyframes slide-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+              transform: translateX(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
