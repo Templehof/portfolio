@@ -46,7 +46,7 @@
   left: 0;
   width: 30%;
   height: 2px;
-  background-color: #f7ff58;
+  background-color: #CF6679;
   transition: all 0.5s;
 }
 
@@ -57,7 +57,7 @@
   right: 0;
   width: 30%;
   height: 2px;
-  background-color: #f7ff58;
+  background-color: #CF6679;
   transition: all 0.5s;
 }
 
@@ -68,7 +68,7 @@
   right: 0;
   width: 2px;
   height: 30%;
-  background-color: #f7ff58;
+  background-color: #CF6679;
   transition: all 0.5s;
 }
 
@@ -79,7 +79,7 @@
   left: 0;
   width: 2px;
   height: 30%;
-  background-color: #f7ff58;
+  background-color: #CF6679;
   transition: all 0.5s;
 }
 

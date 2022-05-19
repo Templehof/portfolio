@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background-image: linear-gradient(-225deg, #3700b3 0%, #562B7C 52%, #BB86FC 100%);
 }
 
 .skills-text-container {
@@ -50,7 +51,7 @@
 }
 
 .skills-text span {
-  color: #f7ff58;
+  color: #bb86fc;
 }
 
 .skills-content-container {

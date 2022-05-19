@@ -31,7 +31,7 @@
   
   .menu-btn:hover span,
   .menu-btn.hover span {
-    background: rgb(242, 84, 91);
+    background: #CF6679;
   }
 
   @media screen and (max-width: 1100px) {

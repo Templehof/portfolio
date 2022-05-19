@@ -5,6 +5,7 @@ import NavBar from "./components/UIelements/NavBar";
 import Main from "./components/pages/main";
 import Skills from "./components/pages/skills";
 import Contact from "./components/pages/contact";
+import Portfolio from "./components/pages/portfolio";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/portfolio/" element={<Portfolio />} />
         <Route path="/skills/" element={<Skills />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

@@ -32,6 +32,23 @@
     align-items: center;
 }
 
+.nav-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #cf6679, #562b7c, #3700b3);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+  }
+  
+  .nav-btn:hover::before {
+    transform: translateX(0);
+  }
+
 .nav-link {
     color: #ffffff;
     text-decoration: none;
@@ -39,62 +56,3 @@
     padding: 1rem;
 }
 
-.nav-btn::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background-color: #F7FF58;
-    transition: all .5s;
-}
-
-.nav-btn span::before{
-    content: "";
-    position: absolute;
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background-color: #F7FF58;
-    transition: all .5s;
-}
-
-.nav-btn:hover span::before {
-    top: 0;
-}
-
-.nav-btn span::after{
-    content: "";
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background-color: #F7FF58;
-    transition: all .5s;
-}
-
-.nav-btn:hover span::after {
-    bottom: 0;
-}
-
-.nav-btn::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background-color: #F7FF58;
-    transition: all .5s;
-}
-
-.nav-btn:hover::before {
-    left: 0;
-}
-
-.nav-btn:hover::after {
-    right: 0;
-}

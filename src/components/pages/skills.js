@@ -22,6 +22,7 @@ const Skills = () => {
 
   return (
     <section className="page-section skills-section">
+      <div className="screen-cover"></div>
       <CSSTransition
         in={isShown}
         timeout={1000}

@@ -12,6 +12,7 @@ const Contact = () => {
 
   return (
     <section className="page-section contact-section">
+      <div className="screen-cover"></div>
       <div className="contact-container">
         <CSSTransition in={isShown} timeout={1000} classNames="contact-title" unmountOnExit >
           <h3 className="contact-title">Send me a message!</h3>

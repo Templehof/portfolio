@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(-225deg, #3700b3 0%, #562B7C 52%, #BB86FC 100%);
 }
 
 .contact-container {
@@ -12,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 999;
 }
 
 .contact-form {
@@ -65,16 +67,12 @@
     z-index: 1;
 }
 
-.contact-submit-btn:hover{
-    color: black;
-}
-
 .contact-submit-btn::before {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
-    background-color: #fff200;
+    background-image: linear-gradient(to bottom right, #cf6679, #562b7c, #3700b3);
     height: 100%;
     width: 100%;
     z-index: -1;
