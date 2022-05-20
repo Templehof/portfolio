@@ -38,8 +38,9 @@
     color: #FFFFF3;
     border: none;
     padding: 1rem;
-    background: #2b2b2b;
+    background: transparent;
     border-radius: 5px;
+    border: 1px solid #FFFFF3;
 
     transition: all 1s;
 }
