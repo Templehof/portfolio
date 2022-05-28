@@ -16,7 +16,27 @@ code {
 .page-section {
   overflow-x: hidden;
   box-sizing: border-box;
-  background-color: #272727;
   width: 100vw;
   min-height: 100vh;
+}
+
+.screen-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.animated-cursor{
+  z-index: 999;
 }

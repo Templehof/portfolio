@@ -2,7 +2,7 @@ const portfolioData = [
     {
       title: "Umeå, city of the north",
       description:
-        "This website is my tribute to the place that's been my home for six years. It the place of great natural beauty, check it out!",
+        "This website is my tribute to the place that's been my home for six years. It is a place of great natural beauty, check it out!",
       techs: "Java Script, HTML5, CSS, Webpack",
       link:"https://templehof.github.io/Umea/",
       shape: "bevel"

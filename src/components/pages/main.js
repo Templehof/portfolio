@@ -1,46 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./main.css";
-import { CSSTransition } from "react-transition-group";
-import BackgroundVideo from "../../video/background3.mp4";
+import backgroundVideo from "../../video/background5.mp4";
+
 
 const Main = () => {
-  const [isShown, setIsShown] = useState(false);
-
-  useEffect(() => {
-    setIsShown(true);
-  }, []);
-
   return (
     <section className="page-section main">
+      <video src={backgroundVideo} autoPlay muted loop></video>
+      <div className="screen-cover"></div>
       <div className="main-content-container">
-        <video src={BackgroundVideo} autoPlay muted loop></video>
-        <div className="screen-cover"></div>
         <div className="main-title-group">
-          <CSSTransition
-            in={isShown}
-            timeout={1000}
-            classNames="main-page-content"
-            unmountOnExit
-          >
-            <h3 className="small-title">
-              Hi! I'm <span>Ivan</span>,
-            </h3>
-          </CSSTransition>
+          <h3 className="small-title">
+            Hi! I'm <span>Ivan</span>,
+          </h3>
           <h3 className="main-title dev-title">
             A researcher turned a{" "}
-            <ul className="stack">
-              <li>f</li>
-              <li>u</li>
-              <li>l</li>
-              <li>l</li>
-              <li>-</li>
-              <li>s</li>
-              <li>t</li>
-              <li>a</li>
-              <li>c</li>
-              <li>k</li>
-            </ul>{" "}
-            developer!
+            <div className="sign">
+              <span className="fast-flicker">f</span>ull
+              <span className="flicker">-s</span>tack
+            </div>
+            {" "} developer!
           </h3>
         </div>
         <p className="main-content">

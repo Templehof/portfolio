@@ -1,22 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./contact.css";
 import Map from "../UIelements/map";
-import { CSSTransition } from "react-transition-group";
+import backgroundVideo2 from "../../video/background1.mp4";
+import gsapFloat from "../UIelements/utils/gsap-float";
+import chip from "../images/mail.svg"
 
 const Contact = () => {
-  const [isShown, setIsShown] = useState(false);
+  const boxRef = useRef(null);
 
   useEffect(() => {
-      setIsShown(true);
+    gsapFloat(boxRef, ".contact-container")
   }, []);
 
   return (
     <section className="page-section contact-section">
+      <video src={backgroundVideo2} autoPlay muted loop></video>
       <div className="screen-cover"></div>
-      <div className="contact-container">
-        <CSSTransition in={isShown} timeout={1000} classNames="contact-title" unmountOnExit >
-          <h3 className="contact-title">Send me a message!</h3>
-        </CSSTransition>
+      <div ref={boxRef} className="contact-container">
+        <div className="contact-info-group">
+          <img className="contact-icon" src={chip} alt="mail" />
+          <div className="contact-info-title">
+            <span>CONTACT</span>
+            <span>ME</span>
+          </div>
+          <p className="email">ivan.riumkin@protonmail.com</p>
+        </div>
         <form
           className="contact-form"
           action="https://formsubmit.co/e08ed884664d81c393b0e4163fcf5896"
@@ -26,7 +34,7 @@ const Contact = () => {
             name="email"
             type="email"
             id="email"
-            placeholder="Type you email here"
+            placeholder="Your email"
             required
           />
           <textarea
@@ -34,7 +42,7 @@ const Contact = () => {
             type="text"
             rows={4}
             id="message"
-            placeholder="Type your message here"
+            placeholder="Your message"
             required
           />
           <button type="submit" className="contact-submit-btn">
@@ -42,8 +50,9 @@ const Contact = () => {
           </button>
         </form>
       </div>
-      <p className="email">ivan.riumkin@protonmail.com</p>
-      <Map center={{ lat: 63.825848, lng: 20.263035 }} zoom={4} />
+      <div className="map-container">
+        <Map center={{ lat: 63.825848, lng: 20.263035 }} zoom={4} />
+      </div>
     </section>
   );
 };
