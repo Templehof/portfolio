@@ -1,24 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import "./contact.css";
 import Map from "../UIelements/map";
-import backgroundVideo2 from "../../video/background1.mp4";
 import gsapFloat from "../UIelements/utils/gsap-float";
-import chip from "../images/mail.svg"
+import mailIcon from "../images/mail.svg";
 
 const Contact = () => {
   const boxRef = useRef(null);
 
   useEffect(() => {
-    gsapFloat(boxRef, ".contact-container")
+    gsapFloat(boxRef, ".contact-container");
   }, []);
-
   return (
     <section className="page-section contact-section">
-      <video src={backgroundVideo2} autoPlay muted loop></video>
-      <div className="screen-cover"></div>
       <div ref={boxRef} className="contact-container">
         <div className="contact-info-group">
-          <img className="contact-icon" src={chip} alt="mail" />
+          <img className="contact-icon" src={mailIcon} alt="mail" />
           <div className="contact-info-title">
             <span>CONTACT</span>
             <span>ME</span>

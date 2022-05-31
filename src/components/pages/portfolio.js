@@ -4,13 +4,11 @@ import "./portfolio.css";
 
 import PortfolioCard from "./portfolio-card";
 import portfolioData from "../data";
-import backgroundVideo2 from "../../video/background1.mp4";
-import gsapFloat from "../UIelements/utils/gsap-float";
 
 const Portfolio = () => {
   const [data, setData] = useState([]);
   const [isShown, setIsShown] = useState(false);
-  const boxRef = useRef(null);
+  const nodeRef =useRef(null)
 
   const getCards = () => {
     const cards = data.map((card) => {
@@ -20,8 +18,11 @@ const Portfolio = () => {
           description={card.description}
           tech={card.techs}
           link={card.link}
+          codelink={card.codelink}
           key={portfolioData.indexOf(card)}
-          shape={card.shape}
+          shortTitle={card.shortTitle}
+          imageurl={card.imageurl}
+          codelinkBack={card.codelinkBack}
         />
       );
     });
@@ -33,24 +34,17 @@ const Portfolio = () => {
     setData(portfolioData);
   }, []);
 
-  useEffect(() => {
-    gsapFloat(boxRef, ".card-container");
-  }, []);
-
   return (
     <div className="card-container">
-      <video src={backgroundVideo2} autoPlay muted loop></video>
-      <div className="screen-cover"></div>
       <CSSTransition
-        nodeRef={boxRef}
         in={isShown}
         timeout={1000}
         classNames="portfolio-card-holder"
         unmountOnExit
+        mountOnEnter
+        nodeRef={nodeRef}
       >
-        <div className="card-holder" ref={boxRef}>
-          {getCards()}
-        </div>
+        <div className="card-holder" ref={nodeRef}>{getCards()}</div>
       </CSSTransition>
     </div>
   );

@@ -13,9 +13,19 @@
   perspective: 1000px;
 }
 
+.contact-page-content-enter {
+  opacity: 0;
+  transform: translateX(40%);
+}
+.contact-page-content-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s;
+}
+
 .contact-container {
   position: relative;
-  background-color: #344252;
+  background-color: #121212;
   border-radius: 0.5rem;
   padding: 2rem;
   width: 45rem;
@@ -28,7 +38,6 @@
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  transform: rotateY(-20deg);
 }
 
 .contact-icon {
@@ -36,14 +45,13 @@
   top: 35%;
   left: 10%;
   width: 10rem;
-  border-radius: 1rem;
 }
 
 .contact-info-title {
   display: flex;
   flex-direction: column;
   position: relative;
-  color: #bb86fc;
+  color: var(--violet);
   font-size: 1.5rem;
   font-weight: bold;
   font-family: "IBM Plex Sans", sans-serif;
@@ -57,7 +65,7 @@
   bottom: -10px;
   width: 25px;
   height: 4px;
-  background: #ff2483;
+  background: var(--pink);
 }
 
 .contact-info-group {
@@ -81,26 +89,22 @@
   font-family: "Bebas Neue", sans-serif;
   font-size: 2rem;
   letter-spacing: 2px;
-  color: #fffff3;
+  color: #ffff;
+  opacity: 0.87;
 }
 
 .contact-form input,
 textarea {
   width: 80%;
   font-size: 1.5rem;
-  color: #fffff3;
+  color: #ffff;
   border: none;
   padding: 1rem;
   background: transparent;
-  border-bottom: 1px solid #fffff3;
+  border-bottom: 1px solid #ffff;
+  opacity: 0.87;
 
   transition: all 1s;
-}
-
-.contact-form label {
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  color: #fffff3;
 }
 
 .contact-submit-btn {
@@ -108,7 +112,7 @@ textarea {
   position: relative;
   font-family: "Bebas Neue", sans-serif;
   padding: 0.5rem 1rem 0.5rem 1rem;
-  color: #bb86fc;
+  color: var(--violet);
   background-color: transparent;
   font-size: 1.5rem;
   border: none;
@@ -116,18 +120,19 @@ textarea {
 }
 
 .contact-submit-btn:hover {
-  color: #ff2483;
+  color: var(--pink);
 }
 
 .email {
-  font-size: 1rem;
-  color: #bb86fc;
+  font-size: 1.5rem;
+  color: var(--violet);
   font-family: "IBM Plex Sans", sans-serif;
 }
 
 .map-container {
   height: fit-content;
   width: fit-content;
+  margin-bottom: 2rem;
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,

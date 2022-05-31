@@ -32,17 +32,15 @@
   font-family: "Roboto Slab", serif;
   letter-spacing: 2px;
   color: #ffffff;
-  opacity: 0.9;
+  opacity: 0.87;
   font-size: 1.7rem;
   text-align: center;
-  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
-    0px -5px 35px rgba(255, 255, 255, 0.3);
   width: 90%;
 }
 
 .skills-text {
   color: #ffffff;
-  opacity: 0.8;
+  opacity: 0.7;
   font-size: 1.3rem;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 700;
@@ -52,15 +50,16 @@
 
 .skills-page-content-enter {
   opacity: 0;
+  transform: translateX(40%);
 }
 .skills-page-content-enter-active {
-  animation: text-focus-in 1s;
   opacity: 1;
+  transform: translateX(0);
   transition: all 1s;
 }
 
 .skills-text span {
-  color: #bb86fc;
+  color: var(--pink);
 }
 
 .skills-content-container {
@@ -75,9 +74,12 @@
 }
 .logo {
   width: 4rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
 }
 
-.ribbon {
+.box {
   box-sizing: border-box;
   position: relative;
   list-style-type: none;
@@ -86,67 +88,88 @@
   justify-content: center;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
-
-  transform-style: preserve-3d;
   perspective: 1000px;
 }
 
-.ribbon li {
+.box li {
+  position: relative;
   width: 8rem;
-  background-image: linear-gradient(
-    110.3deg,
-    rgb(51, 54, 58) 8.8%,
-    rgba(103, 109, 116, 0.212) 95.1%
-  );
-  aspect-ratio: 1 / 1;
-  border-radius: 0.5rem;
+  height: 8rem;
+  margin: 1rem;
+  transition: all 2s ease-in-out;
+  transform-style: preserve-3d;
+  animation: rotate 5s ease-in-out 2s;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
+
+.box li:hover {
+  transform:rotateY(180deg) rotateX(360deg);
+}
+
+.cube__face {
+  background-color: transparent;
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  border-radius: .5rem;
+  border: 1px solid var(--pink);
+  
+}
+
+.cube__face--front {
+  transform: rotateY(0deg) translateZ(4rem);
   display: grid;
   place-items: center;
-  overflow: hidden;
-  margin: 1rem;
-  animation: scaling 5s ease-in infinite, glow 5s ease-in infinite;
-  transition: all 1s ease-in-out;
-  transform: translateZ(-5rem);
-
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.cube__face--right {
+  transform: rotateY(90deg) translateZ(4rem);
+  display: grid;
+  place-items: center;
+}
+.cube__face--back {
+  transform: rotateY(180deg) translateZ(4rem);
+  display: grid;
+  place-items: center;
+}
+.cube__face--left {
+  transform: rotateY(-90deg) translateZ(4rem);
+  display: grid;
+  place-items: center;
+}
+.cube__face--top {
+  transform: rotateX(90deg) translateZ(4rem);
+  display: grid;
+  place-items: center;
+}
+.cube__face--bottom {
+  transform: rotateX(-90deg) translateZ(4rem);
+  display: grid;
+  place-items: center;
 }
 
-.ribbon li:nth-child(1) {
+
+.box li:nth-child(1) {
   animation-delay: 1s;
 }
 
-.ribbon li:nth-child(2) {
-  animation-delay: 3s;
+.box li:nth-child(odd) {
+  animation-delay: 6s;
 }
 
-.ribbon li:nth-child(3) {
-  animation-delay: 1s;
-}
 
-.ribbon li:nth-child(4) {
-  animation-delay: 3s;
-}
+@keyframes rotate {
+  0% {
+    transform: rotateY(0);
+  }
 
-.ribbon li:nth-child(5) {
-  animation-delay: 1s;
-}
+  50% {
+    transform: rotateY(180deg);
+  }
 
-.ribbon li:nth-child(6) {
-  animation-delay: 3s;
-}
-
-.ribbon li:nth-child(7) {
-  animation-delay: 1s;
-}
-
-.ribbon li:nth-child(8) {
-  animation-delay: 3s;
-}
-
-.ribbon li:nth-child(9) {
-  animation-delay: 1s;
+  100% {
+    transform: rotateY(0);
+  }
 }
 
 @keyframes scaling {
@@ -156,6 +179,7 @@
 
   50% {
     transform: translateZ(5rem);
+    background-color: var(--pink);
   }
 
   100% {
@@ -184,21 +208,7 @@
   }
 }
 
-@keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-
+@media screen and (max-width: 1000px) {
   .skills-text-container {
     width: 90%;
   }
@@ -221,13 +231,13 @@
     align-items: center;
   }
 
-  .ribbon {
+  .box {
     grid-template-columns: 1fr 1fr;
     width: 100%;
     padding: 0;
   }
 
-  .ribbon li {
-    animation: glow 5s ease-in infinite;
+  .box li {
+    margin-bottom: 2rem;
   }
 }
