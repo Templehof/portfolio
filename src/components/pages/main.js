@@ -1,20 +1,26 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./main.css";
 import { CSSTransition } from "react-transition-group";
-import ParticlesComponent from "../UIelements/utils/CustomParticles";
+import BackgroundParticles from "../UIelements/utils/backgroundParticles";
 
-const Main = () => {
+const Main = (props) => {
   const [isShown, setIsShown] = useState(false);
-  
+
   const nodeRef = useRef(null);
 
+  let width = window.visualViewport.width;
+
   useEffect(() => {
-    setIsShown(true);
-  }, []);
+    props.shown && setIsShown(true);
+  }, [props.shown]);
 
   return (
     <section className="page-section main">
-      {window.visualViewport.width > 900 && <ParticlesComponent id="tsparticles" />}
+      {width > 900 && (
+        <div className="backgroundParticles">
+          <BackgroundParticles />
+        </div>
+      )}
       <CSSTransition
         nodeRef={nodeRef}
         in={isShown}
