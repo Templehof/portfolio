@@ -12,12 +12,16 @@
     #bb86fc 100%
   );
 
-  cursor:default;
+  cursor: default;
+}
+
+.backgroundParticles{
+  overflow: hidden;
 }
 
 .main-page-content-enter {
   opacity: 0;
-  transform: translateX(40%);
+  transform: translateX(15%);
 }
 .main-page-content-enter-active {
   opacity: 1;
@@ -41,8 +45,9 @@
   letter-spacing: 2px;
   color: #ffffff;
   opacity: 0.87;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
+  margin: 0;
 }
 
 .small-title span {
@@ -87,6 +92,9 @@
 }
 
 @media screen and (max-width: 1100px) {
+  .main-title-group {
+    width: 90%;
+  }
   .main-content-container {
     margin-bottom: 5rem;
     margin-top: 5rem;
@@ -295,4 +303,3 @@
     opacity: 1;
   }
 }
-

@@ -19,15 +19,17 @@ function App() {
   return (
     <div className="App">
       {isLoading && <Loader />}
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Main shown={!isLoading} />} />
-          <Route path="/portfolio/" element={<Portfolio />} />
-          <Route path="/skills/" element={<Skills />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
+      {!isLoading && (
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Main shown={!isLoading} />} />
+            <Route path="/portfolio/" element={<Portfolio />} />
+            <Route path="/skills/" element={<Skills />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </BrowserRouter>
+      )}
     </div>
   );
 }

@@ -18,6 +18,13 @@
   overflow: hidden;
 }
 
+.skills-secondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .skills-text-container {
   box-sizing: border-box;
   width: 40%;
@@ -50,7 +57,7 @@
 
 .skills-page-content-enter {
   opacity: 0;
-  transform: translateX(40%);
+  transform: translateX(15%);
 }
 .skills-page-content-enter-active {
   opacity: 1;
@@ -149,6 +156,11 @@
 }
 
 @media screen and (max-width: 1000px) {
+
+  .cube__face {
+    display: none;
+  }
+  
   .skills-text-container {
     width: 90%;
   }
