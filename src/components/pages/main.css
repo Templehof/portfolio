@@ -248,12 +248,12 @@
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1300px) {
   .main-texts-container {
     width: 95%;
   }
   .main-text {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .sign {

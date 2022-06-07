@@ -139,7 +139,7 @@
   place-items: center;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1300px) {
 
   .cube__face {
     display: none;
