@@ -8,7 +8,7 @@ import portfolioData from "../data";
 const Portfolio = () => {
   const [data, setData] = useState([]);
   const [isShown, setIsShown] = useState(false);
-  const nodeRef =useRef(null)
+  const nodeRef = useRef(null);
 
   const getCards = () => {
     const cards = data.map((card) => {
@@ -35,18 +35,22 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="card-container">
-      <CSSTransition
-        in={isShown}
-        timeout={1000}
-        classNames="portfolio-card-holder"
-        unmountOnExit
-        mountOnEnter
-        nodeRef={nodeRef}
-      >
-        <div className="card-holder" ref={nodeRef}>{getCards()}</div>
-      </CSSTransition>
-    </div>
+    <section className="page-section portfolio-section">
+      <div className="content-container card-container">
+        <CSSTransition
+          in={isShown}
+          timeout={1000}
+          classNames="portfolio-card-holder"
+          unmountOnExit
+          mountOnEnter
+          nodeRef={nodeRef}
+        >
+          <div className="card-holder" ref={nodeRef}>
+            {getCards()}
+          </div>
+        </CSSTransition>
+      </div>
+    </section>
   );
 };
 

@@ -1,4 +1,4 @@
-.main {
+.main-section {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,22 @@
   cursor: default;
 }
 
-.backgroundParticles{
+.main-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-texts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+}
+
+.backgroundParticles {
   overflow: hidden;
 }
 
@@ -26,94 +41,25 @@
 .main-page-content-enter-active {
   opacity: 1;
   transform: translateX(0);
-  transition: all 1s;
-}
-
-.main-content-container {
-  box-sizing: border-box;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.small-title {
-  width: 100%;
-  font-family: "Roboto Slab", serif;
-  letter-spacing: 2px;
-  color: #ffffff;
-  opacity: 0.87;
-  font-size: 2rem;
-  text-align: center;
-  margin: 0;
-}
-
-.small-title span {
-  color: var(--pink);
+  transition: all 1s ease-in-out;
 }
 
 .main-title {
-  width: 100%;
-  font-family: "Roboto Slab", serif;
-  letter-spacing: 2px;
-  color: #ffffff;
+  color: #ffff;
   opacity: 0.87;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
 }
 
-.main-title span {
-  color: var(--pink);
-}
-
-.main-title-group {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.main-content {
-  color: #ffffff;
+.main-text {
+  color: #ffff;
   opacity: 0.87;
-  font-size: 1.3rem;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 700;
-  letter-spacing: 2px;
-  width: 30%;
+  font-size: 1.5rem;
   text-align: center;
 }
 
-.main-content span {
+.main-text span {
   color: var(--pink);
-}
-
-@media screen and (max-width: 1100px) {
-  .main-title-group {
-    width: 90%;
-  }
-  .main-content-container {
-    margin-bottom: 5rem;
-    margin-top: 5rem;
-  }
-  .main-content {
-    width: 90%;
-  }
-
-  .main-title {
-    font-size: 1.5rem;
-  }
-
-  .main-content {
-    font-size: 1.1rem;
-  }
-
-  .stack li {
-    font-size: 1.5rem;
-  }
 }
 
 .sign {
@@ -124,10 +70,8 @@
     transparent
   );
   letter-spacing: 2;
-  left: 50%;
-  top: 50%;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #ffe6ff;
   text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
     -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
@@ -301,5 +245,18 @@
 
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .main-texts-container {
+    width: 95%;
+  }
+  .main-text {
+    font-size: 1rem;
+  }
+
+  .sign {
+    font-size: 2rem;
   }
 }

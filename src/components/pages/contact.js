@@ -11,7 +11,7 @@ const Contact = () => {
   const [isShown, setIsShown] = useState(false);
 
   const setFloater = () => {
-    return gsapFloat(boxRef, ".contact-container");
+    return gsapFloat(boxRef, ".contact-form-container");
   };
 
   useEffect(() => {
@@ -33,14 +33,11 @@ const Contact = () => {
         unmountOnExit
         mountOnEnter
       >
-        <section ref={nodeRef} className="page-section contact-secondary">
-          <div ref={boxRef} className="contact-container">
+        <div ref={nodeRef} className="content-container contact-wrapper">
+          <div ref={boxRef} className="contact-form-container">
             <div className="contact-info-group">
+              <p className="contact-info-title">Contact me</p>
               <img className="contact-icon" src={mailIcon} alt="mail" />
-              <div className="contact-info-title">
-                <span>CONTACT</span>
-                <span>ME</span>
-              </div>
               <p className="email">ivan.riumkin@protonmail.com</p>
             </div>
             <form
@@ -71,7 +68,7 @@ const Contact = () => {
           <div className="map-container">
             <Map center={{ lat: 63.825848, lng: 20.263035 }} zoom={4} />
           </div>
-        </section>
+        </div>
       </CSSTransition>
     </section>
   );

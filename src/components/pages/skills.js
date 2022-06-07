@@ -30,11 +30,11 @@ const Skills = () => {
         unmountOnExit
         mountOnEnter
       >
-        <section className="skills-secondary page-section" ref={nodeRef}>
+        <div className="content-container" ref={nodeRef}>
           <div className="skills-text-container">
-            <h3 className="skills-title">
+            <h1 className="skills-title">
               Here are some technologies I work with
-            </h3>
+            </h1>
             <p className="skills-text">
               Apart from <span>HTML5</span> and <span>CSS</span>. I am
               proficient in writing modern <span>JavaScript</span> including
@@ -135,7 +135,7 @@ const Skills = () => {
               </ul>
             </div>
           </div>
-        </section>
+        </div>
       </CSSTransition>
     </section>
   );
