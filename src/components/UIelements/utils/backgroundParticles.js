@@ -9,7 +9,7 @@ const BackgroundParticles = () => {
       // 'red' or ['red', 'blue', 'green']
       color: ["#d0e04c"],
       // auto resize to fit the screen
-      resize: false,
+      resize: true,
       // number of particles
       num: 0.07,
       // max radius
