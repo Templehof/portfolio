@@ -4,12 +4,14 @@ import "./portfolio-card.css";
 import umea from "../images/portfolio-images/umea.png";
 import cityTravel from "../images/portfolio-images/cityTravel.png";
 import bdev from "../images/portfolio-images/bdev.png";
+import creative from "../images/portfolio-images/creative.png"
 
 const PortfolioCard = (props) => {
   const images = [
     { title: "umea", url: umea },
     { title: "cityTravel", url: cityTravel },
     { title: "bdev", url: bdev },
+    { title: "creative", url: creative },
   ];
 
   function pickImage() {

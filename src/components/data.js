@@ -1,9 +1,18 @@
 const portfolioData = [
   {
+    title: "Creative Solutions",
+    shortTitle: "creative",
+    description:
+      "This website features a creative business model canvas which can be filled in and saved to PdF. It is built with custom React.",
+    techs: "React, Webpack, CSS",
+    link: "https://templehof.github.io/creativeSolutions/#/",
+    codelink: "https://github.com/Templehof/creativeSolutions",
+  },
+  {
     title: "Umeå, city of the north",
     shortTitle: "umea",
     description:
-      "This website is my tribute to the place that's been my home for six years. It is a place of great natural beauty, check it out!",
+      "This website is my tribute to the place that's been my home for six years. It features a cool 3d scroll made in pure JavaScript",
     techs: "Java Script, HTML5, CSS, Webpack",
     link: "https://templehof.github.io/Umea/",
     codelink: "https://github.com/Templehof/Umea",
@@ -12,7 +21,7 @@ const portfolioData = [
     title: "Business/Dev",
     shortTitle: "bdev",
     description:
-      "This website serves as a glossary of various business development tools divided into categories with descriptions and further readings.",
+      "This website serves as a glossary of various business development tools. Frontend is built with React and a simple backend with NodeJs and MongoDB",
     techs: "ReactJs, CSS, NodeJS, MongoDB",
     link: "https://business-dev-tools.com/",
     codelink: "https://github.com/Templehof/bdev",
