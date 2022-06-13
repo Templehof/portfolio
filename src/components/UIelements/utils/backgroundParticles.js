@@ -7,7 +7,7 @@ const BackgroundParticles = () => {
       // opacity: 0 ~ 1
       opacity: 1,
       // 'red' or ['red', 'blue', 'green']
-      color: ["#d0e04c"],
+      color: ["#FFFF"],
       // auto resize to fit the screen
       resize: true,
       // number of particles

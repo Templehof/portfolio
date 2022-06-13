@@ -1,39 +1,25 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "./contact.css";
-import { CSSTransition } from "react-transition-group";
 import Map from "../UIelements/map";
 import gsapFloat from "../UIelements/utils/gsap-float";
 import mailIcon from "../images/mail.svg";
+import { Fade } from "react-reveal";
 
 const Contact = () => {
   const boxRef = useRef(null);
-  const nodeRef = useRef(null);
-  const [isShown, setIsShown] = useState(false);
 
   const setFloater = () => {
     return gsapFloat(boxRef, ".contact-form-container");
   };
 
   useEffect(() => {
-    setIsShown(true);
+    setFloater();
   }, []);
 
-  useEffect(() => {
-    if (isShown) {
-      setFloater();
-    }
-  }, [isShown]);
   return (
-    <section className="page-section contact-section">
-      <CSSTransition
-        nodeRef={nodeRef}
-        in={isShown}
-        timeout={1000}
-        classNames="contacting-page-content"
-        unmountOnExit
-        mountOnEnter
-      >
-        <div ref={nodeRef} className="content-container contact-wrapper">
+    <section className="page-section contact-section" id="contact">
+      <Fade right distance={"30%"} fraction={0.5} duration={2000}>
+        <div className="content-container contact-wrapper">
           <div ref={boxRef} className="contact-form-container">
             <div className="contact-info-group">
               <p className="contact-info-title">Contact me</p>
@@ -69,7 +55,7 @@ const Contact = () => {
             <Map center={{ lat: 63.825848, lng: 20.263035 }} zoom={4} />
           </div>
         </div>
-      </CSSTransition>
+      </Fade>
     </section>
   );
 };

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/UIelements/NavBar";
 import Main from "./components/pages/main";
 import Skills from "./components/pages/skills";
@@ -14,21 +13,19 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    }, 100);
   }, []);
   return (
     <div className="App">
       {isLoading && <Loader />}
       {!isLoading && (
-        <BrowserRouter>
+        <React.Fragment>
           <NavBar />
-          <Routes>
-            <Route path="/" element={<Main shown={!isLoading} />} />
-            <Route path="/portfolio/" element={<Portfolio />} />
-            <Route path="/skills/" element={<Skills />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </BrowserRouter>
+          <Main />
+          <Portfolio />
+          <Skills />
+          <Contact />
+        </React.Fragment>
       )}
     </div>
   );

@@ -1,16 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom"
 import "./NavLinks.css"
 
-const NavLinks = (props) => {
+const Navas = (props) => {
     return (
         <ul className="navs">
-            <li className="nav-btn"><Link className="nav-link" to="/">Main</Link><span></span></li>
-            <li className="nav-btn"><Link className="nav-link" to="/portfolio">Portfolio</Link><span></span></li>
-            <li className="nav-btn"><Link className="nav-link" to="/skills">My Skills</Link><span></span></li>
-            <li className="nav-btn"><Link className="nav-link" to="/contact">Contact me</Link><span></span></li>
+            <li className="nav-btn"><a className="nav-link" href="#main">Main</a><span></span></li>
+            <li className="nav-btn"><a className="nav-link" href="#portfolio">Portfolio</a><span></span></li>
+            <li className="nav-btn"><a className="nav-link" href="#skills">My Skills</a><span></span></li>
+            <li className="nav-btn"><a className="nav-link" href="#contact">Contact me</a><span></span></li>
         </ul>
     )
 }
 
-export default NavLinks;
+export default Navas;

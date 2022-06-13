@@ -1,41 +1,26 @@
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import "./main.css";
-import { CSSTransition } from "react-transition-group";
 import BackgroundParticles from "../UIelements/utils/backgroundParticles";
+import { Fade } from "react-reveal";
+import { Zoom } from "react-reveal";
 
-const Main = (props) => {
-  const [isShown, setIsShown] = useState(false);
-
-  const nodeRef = useRef(null);
-
+const Main = () => {
   let width = window.visualViewport.width;
-
-  useEffect(() => {
-    props.shown && setIsShown(true);
-  }, [props.shown]);
 
   return (
     <section className="page-section main-section">
       {width > 900 && (
-        <div className="backgroundParticles">
-          <BackgroundParticles />
-        </div>
+        <Zoom delay={1000}>
+          <div className="backgroundParticles">
+            <BackgroundParticles />
+          </div>
+        </Zoom>
       )}
-      <CSSTransition
-        nodeRef={nodeRef}
-        in={isShown}
-        timeout={1000}
-        classNames="main-page-content"
-        unmountOnExit
-        mountOnEnter
-      >
-        <div className="content-container main-content-container" ref={nodeRef}>
-          <div className ="main-texts-container">
-            <h1 className="main-title">Hi there! I'm Ivan, a web-developer!</h1>
-            <p className="sign">
-              <span className="fast-flicker">f</span>ull
-              <span className="flicker">-s</span>tack
-            </p>
+      <div className="content-container main-content-container" id="main">
+        <Fade right distance={"30%"} fraction={0.5} duration={2000} >
+          <div className="main-texts-container">
+            <h1 className="main-title">Hi there! I'm Ivan</h1>
+            <h2 className="main-subtitle">A full-stack web-developer</h2>
             <p className="main-text">
               I build things for the web and look forward to opportunities to
               work on your amazing projects! I consider primarily{" "}
@@ -43,8 +28,8 @@ const Main = (props) => {
               won't shy away from back-end as well.
             </p>
           </div>
-        </div>
-      </CSSTransition>
+        </Fade>
+      </div>
     </section>
   );
 };

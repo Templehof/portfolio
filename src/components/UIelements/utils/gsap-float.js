@@ -10,8 +10,8 @@ function gsapFloat(boxRef, container) {
     let clientY;
 
     body.addEventListener("mousemove", (e) => {
-      clientX = e.pageX;
-      clientY = e.pageY;
+      clientX = e.clientX;
+      clientY = e.clientY;
 
       //console.log(clientX, "/", clientY)
       requestAnimationFrame(updateMe);
