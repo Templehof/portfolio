@@ -3,6 +3,7 @@ import "./portfolio.css";
 
 import PortfolioCard from "./portfolio-card";
 import portfolioData from "../data";
+import LightParticles from "../UIelements/utils/lightParticles";
 
 const Portfolio = () => {
   const [data, setData] = useState([]);
@@ -32,6 +33,7 @@ const Portfolio = () => {
 
   return (
     <section className="page-section portfolio-section" id="portfolio">
+      <LightParticles />
       <div className="content-container card-container">
           <div className="card-holder">
             {getCards()}

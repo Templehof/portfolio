@@ -1,44 +1,35 @@
 import React, { useEffect } from "react";
 import { Particle } from "jparticles";
 
-const BackgroundParticles = () => {
+const LightParticles = () => {
   useEffect(() => {
-    new Particle("#demo", {
+    new Particle("#light", {
       // opacity: 0 ~ 1
-      opacity: 1,
+      opacity: .5,
       // 'red' or ['red', 'blue', 'green']
       color: ["#FFFF"],
       // auto resize to fit the screen
       resize: true,
       // number of particles
-      num: 0.04,
-      // max radius
-      maxR: 3,
+      num: 0.05,
       // min radius
-      minR: 0.6,
+      minR: 0,
       // max speed
-      maxSpeed: 0.5,
+      maxSpeed: 0.2,
       // min speed
       minSpeed: 0.1,
       // connection line options
-      proximity: 0.1,
-      range: 0.2,
+      range: 0,
       // line width
-      lineWidth: 0.5,
-      // spider or cube
-      lineShape: "cube",
       // null = current canvas element
       eventElem: null,
       // enable parallax effect
-      parallax: true,
+      parallax: false,
       // parallax layers
-      parallaxLayer: [1, 2, 3],
-      // pallax strength
-      parallaxStrength: 10,
     });
   }, []);
 
-  return <div id="demo"></div>;
+  return <div id="light"></div>;
 };
 
-export default BackgroundParticles;
+export default LightParticles;

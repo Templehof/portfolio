@@ -21,7 +21,7 @@
     margin: 0.2rem;
     width: 2rem;
     height: 4px;
-    background: #d3d3d3;
+    background: #FFFF;
     transition: all .3s ease-out;
   }
 
@@ -31,7 +31,7 @@
   
   .menu-btn:hover span,
   .menu-btn.hover span {
-    background: #CF6679;
+    background: var(--bright);
   }
 
   @media screen and (max-width: 1300px) {

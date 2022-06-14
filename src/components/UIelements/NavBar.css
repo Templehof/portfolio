@@ -57,7 +57,7 @@
   font-size: 1.8rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: #ffffff;
 }
 
@@ -107,7 +107,6 @@
 
 .logo-subtitle {
   color: #ffffff;
-  font-family: "IBM Plex Sans", sans-serif;
   font-size: 0.8rem;
 }
 

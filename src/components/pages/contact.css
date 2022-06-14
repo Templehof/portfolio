@@ -34,11 +34,12 @@
 }
 
 .contact-info-title {
+  font-family: "Montserrat", sans-serif;
   display: flex;
   position: relative;
-  color: var(--bright);
+  color: #FFFF;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .contact-info-title:after {

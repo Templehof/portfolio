@@ -30,22 +30,19 @@
 .main-title {
   color: #ffff;
   font-size: 1.5rem;
-
 }
 
 .main-subtitle {
   color: #ffff;
-  font-family: 'Montserrat', serif;
+  font-family: "Montserrat", serif;
   font-weight: 900;
   font-size: 5rem;
   line-height: 1;
-
 }
 
 .main-text {
   color: #ffff;
   font-size: 1.5rem;
-
 }
 
 .main-text span {
@@ -60,7 +57,7 @@
     font-size: 1.5rem;
   }
 
-  .sign {
-    font-size: 2rem;
+  .main-subtitle {
+    font-size: 3rem;
   }
 }

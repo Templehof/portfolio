@@ -26,10 +26,10 @@
   line-height: 150px;
   font-family: sans-serif;
   font-size: 20px;
-  color: var(--pink);
+  color: var(--bright);
   letter-spacing: 4px;
   text-transform: uppercase;
-  text-shadow: 0 0 10px var(--pink);
+  text-shadow: 0 0 10px var(--bright);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .loader:before {
@@ -40,8 +40,8 @@
   width: 100%;
   height: 100%;
   border: 3px solid transparent;
-  border-top: 3px solid var(--pink);
-  border-right: 3px solid var(--pink);
+  border-top: 3px solid var(--bright);
+  border-right: 3px solid var(--bright);
   border-radius: 50%;
   animation: animateC 2s linear infinite;
 }
@@ -62,10 +62,10 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--pink);
+  background: var(--bright);
   top: -6px;
   right: -8px;
-  box-shadow: 0 0 20px var(--pink);
+  box-shadow: 0 0 20px var(--bright);
 }
 @keyframes animateC {
   0% {
