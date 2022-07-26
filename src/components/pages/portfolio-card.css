@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   padding-bottom: 2rem;
+  will-change: translate;
 }
 
 .portfolio-card:nth-child(odd) {
@@ -66,14 +67,14 @@
 }
 
 .card-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   text-align: center;
   color: #ffff;
 }
 
 .card-text {
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, 0.7);
   font-size: 1rem;
   letter-spacing: 1px;
   text-align: end;
@@ -81,7 +82,7 @@
   z-index: 3;
   width: 100%;
 
-padding: 2rem;
+  padding: 2rem;
 }
 
 .card-text-tech {
@@ -89,13 +90,12 @@ padding: 2rem;
   letter-spacing: 1px;
   text-align: start;
   color: #ffff;
-  
 }
 
 .card-link {
   text-align: center;
   text-decoration: none;
-  color: #FFFF;
+  color: #ffff;
   transition: all ease-out 0.5s;
 }
 

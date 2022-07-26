@@ -19,7 +19,7 @@ const Portfolio = () => {
           codelink={card.codelink}
           key={portfolioData.indexOf(card)}
           shortTitle={card.shortTitle}
-          imageurl={card.imageurl}
+          image={card.image}
           codelinkBack={card.codelinkBack}
         />
       );

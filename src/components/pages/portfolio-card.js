@@ -1,35 +1,16 @@
 import React from "react";
 import "./portfolio-card.css";
 
-import umea from "../images/portfolio-images/umea.png";
-import cityTravel from "../images/portfolio-images/cityTravel.png";
-import bdev from "../images/portfolio-images/bdev.png";
-import porto from "../images/portfolio-images/porto.png";
 import { Fade } from "react-reveal";
 
 const PortfolioCard = (props) => {
-  const images = [
-    { title: "umea", url: umea },
-    { title: "cityTravel", url: cityTravel },
-    { title: "bdev", url: bdev },
-    { title: "porto", url: porto },
-  ];
-
-  function pickImage() {
-    for (let i = 0; i < images.length; i++) {
-      if (props.shortTitle === images[i].title) {
-        return images[i].url;
-      }
-    }
-  }
-
   return (
     <div className="portfolio-card">
-      <Fade right distance={"30%"} fraction={0.5}  duration={2000}>
+      <Fade right distance={"30%"} fraction={0.5} duration={2000}>
         <div className="image-container">
           <img
             className="portfolio-image"
-            src={pickImage()}
+            src={props.image}
             alt="site-snapshot"
           />
         </div>

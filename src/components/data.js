@@ -1,3 +1,8 @@
+import umea from "./images/portfolio-images/umea.png";
+import cityTravel from "./images/portfolio-images/cityTravel.png";
+import bdev from "./images/portfolio-images/bdev.png";
+import porto from "./images/portfolio-images/porto.png";
+
 const portfolioData = [
   {
     title: "Tiles of Porto",
@@ -7,6 +12,7 @@ const portfolioData = [
     techs: "React, Typescript, Gsap, HTML, CSS",
     link: "https://templehof.github.io/tiles-of-porto/",
     codelink: "https://github.com/Templehof/tiles-of-porto",
+    image: porto
   },
   {
     title: "Umeå, city of the north",
@@ -16,6 +22,7 @@ const portfolioData = [
     techs: "Java Script, HTML5, CSS, Webpack",
     link: "https://templehof.github.io/Umea/",
     codelink: "https://github.com/Templehof/Umea",
+    image: umea
   },
   {
     title: "Business/Dev",
@@ -26,6 +33,7 @@ const portfolioData = [
     link: "https://business-dev-tools.com/",
     codelink: "https://github.com/Templehof/bdev",
     codelinkBack: "https://github.com/Templehof/bdev-backend",
+    image: bdev
   },
   {
     title: "City Break",
@@ -35,6 +43,7 @@ const portfolioData = [
     techs: "Java Script, HTML5, CSS",
     link: "https://templehof.github.io/city-travel/",
     codelink: "https://github.com/Templehof/city-travel",
+    image: cityTravel
   },
 ];
 
