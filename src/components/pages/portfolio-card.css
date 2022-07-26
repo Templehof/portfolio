@@ -103,7 +103,7 @@
   color: var(--bright);
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1400px) {
   .image-container {
     width: 50%;
     height: auto;

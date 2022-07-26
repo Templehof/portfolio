@@ -28,12 +28,12 @@
 }
 
 .main-title {
-  color: #ffff;
+  color: var(--white);
   font-size: 1.5rem;
 }
 
 .main-subtitle {
-  color: #ffff;
+  color: var(--white);
   font-family: "Montserrat", serif;
   font-weight: 900;
   font-size: 5rem;
@@ -41,11 +41,30 @@
 }
 
 .main-text {
-  color: #ffff;
+  color: var(--white);
   font-size: 1.5rem;
 }
 
 .main-text span {
+  color: var(--bright);
+}
+
+.skills-title {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  color: var(--white);
+  font-size: 1.7rem;
+  width: 90%;
+  border-bottom: 2px solid var(--bright);
+}
+
+.skills-text {
+  color: var(--white);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.skills-text span {
   color: var(--bright);
 }
 

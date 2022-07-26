@@ -8,6 +8,16 @@ import Linkedin from "../images/linkedin.svg";
 import MenuButton from "./menu-btn";
 import MobileMenu from "./mobile-menu";
 import me from "../images/me.svg";
+import htmlLogo from "../images/techlogos/html.svg";
+import cssLogo from "../images/techlogos/css.svg";
+import gitLogo from "../images/techlogos/git.svg";
+import jsLogo from "../images/techlogos/javascript.svg";
+import jestLogo from "../images/techlogos/jest.svg";
+import mongodbLogo from "../images/techlogos/mongodb.svg";
+import nodejsLogo from "../images/techlogos/nodejs.svg";
+import reactLogo from "../images/techlogos/react.svg";
+import webpackLogo from "../images/techlogos/webpack.svg";
+import typescriptLogo from "../images/techlogos/typescript.png";
 
 const NavBar = (props) => {
   const [isMobileShown, setIsMobileShown] = useState(false);
@@ -18,7 +28,6 @@ const NavBar = (props) => {
     <React.Fragment>
       <MenuButton handleClick={toggleMobile} />
       {isMobileShown && <MobileMenu handleClick={toggleMobile} />}
-
 
       <Fade left delay={1000} duration={2000}>
         <aside className="navbar">
@@ -55,6 +64,41 @@ const NavBar = (props) => {
             </a>
           </div>
         </aside>
+      </Fade>
+
+      <Fade right distance={"30%"} delay={2000} fraction={0.5} duration={2000}>
+        <ul className="box">
+          <li>
+            <img className="logo" src={jsLogo} alt="" />
+          </li>
+          <li>
+            <img className="logo" src={htmlLogo} alt="" />
+          </li>
+          <li>
+            <img className="logo" src={cssLogo} alt="" />
+          </li>
+          <li>
+            <img className="logo" src={gitLogo} alt="" />
+          </li>
+          <li>
+            <img className="logo" src={webpackLogo} alt="" />
+          </li>
+          <li>
+            <img className="logo" src={jestLogo} alt="" />
+          </li>
+          <li>
+            <img className="logo" src={mongodbLogo} alt="" />
+          </li>
+          <li>
+            <img className="logo" src={nodejsLogo} alt="" />
+          </li>
+          <li>
+            <img className="logo" src={reactLogo} alt="" />
+          </li>
+          <li>
+            <img className="logo" src={typescriptLogo} alt="" />
+          </li>
+        </ul>
       </Fade>
     </React.Fragment>
   );

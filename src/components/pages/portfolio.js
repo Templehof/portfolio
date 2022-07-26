@@ -1,43 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./portfolio.css";
 
 import PortfolioCard from "./portfolio-card";
 import portfolioData from "../data";
-import LightParticles from "../UIelements/utils/lightParticles";
 
 const Portfolio = () => {
-  const [data, setData] = useState([]);
-
-  const getCards = () => {
-    const cards = data.map((card) => {
-      return (
-        <PortfolioCard
-          title={card.title}
-          description={card.description}
-          tech={card.techs}
-          link={card.link}
-          codelink={card.codelink}
-          key={portfolioData.indexOf(card)}
-          shortTitle={card.shortTitle}
-          image={card.image}
-          codelinkBack={card.codelinkBack}
-        />
-      );
-    });
-    return cards;
-  };
-
-  useEffect(() => {
-    setData(portfolioData);
-  }, []);
-
   return (
     <section className="page-section portfolio-section" id="portfolio">
-      <LightParticles />
       <div className="content-container card-container">
-          <div className="card-holder">
-            {getCards()}
-          </div>
+        <div className="card-holder">
+        <h2 className="portfolio-title">Some of my works</h2>
+          {portfolioData.map((card) => {
+            return (
+              <PortfolioCard
+                title={card.title}
+                description={card.description}
+                tech={card.techs}
+                link={card.link}
+                codelink={card.codelink}
+                key={portfolioData.indexOf(card)}
+                shortTitle={card.shortTitle}
+                image={card.image}
+                codelinkBack={card.codelinkBack}
+              />
+            );
+          })}
+        </div>
       </div>
     </section>
   );

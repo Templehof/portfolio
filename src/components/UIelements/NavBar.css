@@ -121,8 +121,46 @@
   transform: scale(1.1);
 }
 
+.logo {
+  width: 1.5rem;
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+}
+
+.box {
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.box li {
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+  transition: all 2s ease-in-out;
+  transform-style: preserve-3d;
+  animation: rotate 5s ease-in-out 2s;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.box li:hover {
+  background-color: aliceblue;
+}
+
 @media screen and (max-width: 1300px) {
   .navbar {
+    display: none;
+  }
+
+  .box {
     display: none;
   }
 }

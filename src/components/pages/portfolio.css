@@ -16,8 +16,21 @@
   overflow: hidden;
 }
 
+.portfolio-title {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  color: var(--white);
+  font-size: 1.7rem;
+  width: 90%;
+  border-bottom: 2px solid var(--bright);
+}
+
 @media screen and (max-width: 1300px) {
   .card-holder {
     width: 90%;
+  }
+
+  .portfolio-title{
+    width: 50%;
   }
 }
