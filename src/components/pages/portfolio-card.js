@@ -4,7 +4,7 @@ import "./portfolio-card.css";
 import umea from "../images/portfolio-images/umea.png";
 import cityTravel from "../images/portfolio-images/cityTravel.png";
 import bdev from "../images/portfolio-images/bdev.png";
-import creative from "../images/portfolio-images/creative.png";
+import porto from "../images/portfolio-images/porto.png";
 import { Fade } from "react-reveal";
 
 const PortfolioCard = (props) => {
@@ -12,7 +12,7 @@ const PortfolioCard = (props) => {
     { title: "umea", url: umea },
     { title: "cityTravel", url: cityTravel },
     { title: "bdev", url: bdev },
-    { title: "creative", url: creative },
+    { title: "porto", url: porto },
   ];
 
   function pickImage() {
